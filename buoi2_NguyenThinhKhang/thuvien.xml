@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library [
+    <!ELEMENT library (book+)>
+    <!ELEMENT book (title, author, year, genre)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT genre (#PCDATA)>
+]>
+<library>
+    <book>
+        <title>Du hành ở dị giới</title>
+        <author>Nguyễn Thịnh Khang</author>
+        <year>2020</year>
+        <genre>Tiểu thuyết</genre>
+    </book>
+    <book>
+        <title>Silent Witch</title>
+        <author>Isora Matsuri</author>
+        <year>2019</year>
+        <genre>Magic</genre>
+    </book>
+    <book>
+        <title>Plastic Memories</title>
+        <author>Hayashi Naotaka</author>
+        <year>2015</year>
+        <genre> Visual novel</genre>
+    </book>
+</library>
