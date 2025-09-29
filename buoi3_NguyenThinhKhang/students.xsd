@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/students"
+    xmlns="http://example.com/students"
+    elementFormDefault="qualified">
+
+    <!-- Định nghĩa phần tử student -->
+    <xs:element name="student">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" />
+                <xs:element name="dob" type="xs:date" />
+                <xs:element name="major" type="xs:string" />
+            </xs:sequence>
+            <!-- Thuộc tính id là xs:ID, đảm bảo duy nhất trong toàn tài liệu XML -->
+            <xs:attribute name="id" type="xs:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Định nghĩa phần tử students chứa nhiều student -->
+    <xs:element name="students">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="student" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
